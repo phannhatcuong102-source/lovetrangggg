@@ -1,66 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Vợ Yêu Của Anh</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lovely</title>
-  <link rel="icon" type="image/png" href="/heart.png" />
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="heart.png" />
 
-  <script type="importmap">
-    {
-      "imports": {
-        "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
-        "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js",
-        "three/examples/jsm/loaders/FontLoader.js": "https://unpkg.com/three@0.152.2/examples/jsm/loaders/FontLoader.js",
-        "three/examples/jsm/geometries/TextGeometry.js": "https://unpkg.com/three@0.152.2/examples/jsm/geometries/TextGeometry.js"
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+          "three/addons/controls/OrbitControls.js": "https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js",
+          "three/examples/jsm/loaders/FontLoader.js": "https://unpkg.com/three@0.152.2/examples/jsm/loaders/FontLoader.js",
+          "three/examples/jsm/geometries/TextGeometry.js": "https://unpkg.com/three@0.152.2/examples/jsm/geometries/TextGeometry.js"
+        }
       }
-    }
-  </script>
-</head>
+    </script>
 
-<body>
-  <div id="container">
-    <div id="image-input-container" >
-      <label>Nhập link ảnh (thêm ảnh khác bằng cách thêm dấu , phẩy sau link ảnh cũ):</label><br />
-      <textarea id="image-links" rows="4" cols="40"></textarea><br />
-      <button id="generate-link">Copy link</button>
-    </div>
+    <style>
+      #image-input-container {
+        display: none !important;
+      }
+    </style>
+  </head>
 
-    <button id="toggle-audio" class="text-white btn-audio-toggle"
-      style="position: absolute; top: 10px; right: 10px; z-index: 999;">
-      <i id="audio-icon" class="fa-solid fa-volume-xmark"></i>
-    </button>
-
-    <div id="landscape-warning">
-      <div class="warning-content">
-        <div class="rotate-icon"></div>
-        <h1>Love</h1>
-        <h1>Tinh Cầu</h1>
-        <p style="font-size: 0.6em;">Cậu hãy xoay ngang màn hình nha!</p>
-        <p style="font-size: 0.6em;">Nhớ chạm vào tinh cầu ở giữa để mở quà bí mật nha.</p>
-        <div class="stars-bg"></div>
+  <body>
+    <div id="container">
+      <div id="image-input-container">
+        <label>Nhập link ảnh:</label><br />
+        <textarea id="image-links" rows="4" cols="40"></textarea><br />
+        <button id="generate-link">Copy link</button>
       </div>
+
+      <button
+        id="toggle-audio"
+        class="text-white btn-audio-toggle"
+        style="position: absolute; top: 10px; right: 10px; z-index: 999"
+      >
+        <i id="audio-icon" class="fa-solid fa-volume-xmark"></i>
+      </button>
+
+      <div id="landscape-warning">
+        <div class="warning-content">S
+          <div class="rotate-icon"></div>
+          <h1>Love</h1>
+          <h1>Quỳnh Trang</h1>
+          <p style="font-size: 0.6em">Vợ iu xoay ngang màn hình lại nha!</p>
+          <p style="font-size: 0.6em">
+            Vợ Thử chạm vào tinh cầu ở giữa đi.
+          </p>
+          <div class="stars-bg"></div>
+        </div>
+      </div>
+
+      <div id="dark-overlay"></div>
+      <div id="info"></div>
     </div>
 
-    <div id="dark-overlay"></div>
-    <div id="info"></div>
+    <!-- CẤU HÌNH ẢNH CỐ ĐỊNH Ở ĐÂY -->
+    <script>
+      window.dataLove2Loveloom = {
+        template: "galaxy",
+        data: {
+          keychain: {
+            name: "Loveloom",
+            phone: "Loveloom",
+            address: "Loveloom",
+          },
 
-  </div>
-  <script>
-    window.dataLove2Loveloom = {
-      template: "galaxy",
-      data: {
-        keychain: { name: "Loveloom", phone: "Loveloom", address: "Loveloom" },
-        ringTexts: ["My love"],
-      }
-    };
-  </script>
+          ringTexts: ["My love"],
+          images: [
+            "./image/3.jpg",
+            "./image/4.jpg",
+            "./image/7.jpg",
+            "./image/8.jpg",
+            "./image/9.jpg",
+            "./image/10.jpg",
+            "./image/11.jpg",
+            "./image/12.jpg",
+            "./image/13.jpg",
+            "./image/15.jpg",
+            "./image/16.jpg",
+            "./image/17.jpg",
+            "./image/19.jpg",
+            "./image/20.jpg",
+            "./image/21.jpg",
+          ],
+        },
+      };
+    </script>
 
-  <script src="./script.js"></script>
-  <script type="module" src="./galaxy.js"></script>
-</body>
-
+    <script src="./script.js"></script>
+    <script type="module" src="./galaxy.js"></script>
+  </body>
 </html>
